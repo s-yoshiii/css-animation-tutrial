@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import React, { FC } from "react";
 import RotatingButton from "../components/buttons/RotatingButton";
+import CircularSwapButton from "../components/buttons/CircularSwapButton";
 
 const Home: FC = () => {
   return (
@@ -25,6 +26,7 @@ const Home: FC = () => {
 
         <div className={styles.grid}>
           <RotatingButton />
+          <CircularSwapButton />
         </div>
       </main>
 
