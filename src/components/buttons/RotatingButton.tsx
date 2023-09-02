@@ -4,7 +4,7 @@ import styles from "./RotatingButton.module.scss";
 
 const RotatingButton: FC = () => {
   return (
-    <Link href="/" className={styles.link}>
+    <Link href="/gsap" className={styles.link}>
       Hover me
     </Link>
   );
