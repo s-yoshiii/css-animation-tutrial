@@ -6,7 +6,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
-const Gsap: FC = () => {
+const GsapAnimation: FC = () => {
+  const mainRef = useRef<HTMLElement | null>(null);
   const panelsWrapperRef = useRef<HTMLDivElement | null>(null);
   const panelsRef = useRef<HTMLDivElement | null>(null);
   const didEffect = useRef(false);
@@ -19,16 +20,14 @@ const Gsap: FC = () => {
     const panelsWrapperElement = panelsWrapperRef?.current;
     if (!panelsWrapperElement) return;
     setupGsap(panelsElement, panelsWrapperElement);
+    // if (!mainRef) return;
   }, []);
   const setupGsap = (
     panelsElement: HTMLDivElement,
     panelsWrapperElement: HTMLDivElement
   ) => {
     gsap.to(panelsElement, {
-      x: () =>
-        -(
-          panelsRef?.current.clientWidth - panelsWrapperRef?.current.clientWidth
-        ),
+      x: () => -(panelsElement.clientWidth - panelsWrapperElement.clientWidth),
       ease: "none",
       scrollTrigger: {
         trigger: "#horizontal-scroll-section",
@@ -40,9 +39,9 @@ const Gsap: FC = () => {
         anticipatePin: 1,
         invalidateOnRefresh: true,
         markers: true,
-    };
+      },
+    });
   };
-
   return (
     <>
       <main className={styles.main}>
@@ -64,7 +63,7 @@ const Gsap: FC = () => {
                     className={styles.image}
                   />
                 </div>
-                <div className={styles.panel id={02}}>テキストテキスト</div>
+                <div className={styles.panel}>テキストテキスト</div>
                 <div className={styles.panel}>
                   <Image
                     src="https://placekitten.com/g/1440/960"
@@ -102,4 +101,4 @@ const Gsap: FC = () => {
   );
 };
 
-export default Gsap;
+export default GsapAnimation;
