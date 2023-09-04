@@ -1,5 +1,6 @@
 .main {
   background: black;
+  width: 100%;
 }
 
 .section {
@@ -8,6 +9,9 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  @media screen and (max-width: 600px) {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -33,6 +37,9 @@
   width: 1440px;
   height: 100%;
   color: #fff;
+  @media screen and (max-width: 600px) {
+    width: 100vw;
+  }
 }
 .image {
   width: 100%;
@@ -43,4 +50,7 @@
 .footer {
   height: 50vh;
   background: #fff;
+  @media screen and (max-width: 600px) {
+    height: 300px;
+  }
 }
