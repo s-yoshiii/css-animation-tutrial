@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.scss";
 import React, { FC } from "react";
 import RotatingButton from "../components/buttons/RotatingButton";
 import CircularSwapButton from "../components/buttons/CircularSwapButton";
+import SwippingButton from "../components/buttons/swippingButton";
 
 const Home: FC = () => {
   return (
@@ -27,6 +28,7 @@ const Home: FC = () => {
         <div className={styles.grid}>
           <RotatingButton />
           <CircularSwapButton />
+          <SwippingButton />
         </div>
       </main>
 
