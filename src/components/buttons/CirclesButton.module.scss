@@ -1,0 +1,46 @@
+.link {
+  width: 220px;
+  height: 80px;
+  background: transparent;
+  font-size: 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  transition: all 0.5s;
+  position: relative;
+  color: #ff0;
+  background: #272727;
+
+  &::after,
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    transition: all 0.3s;
+    border-radius: 50%;
+  }
+  &::before {
+    left: 0;
+    box-shadow: -100px 0 0 green;
+  }
+  &::after {
+    right: 0;
+    box-shadow: 100px 0 0 blue;
+  }
+  &:hover {
+    &::before {
+      left: 50%;
+      box-shadow: 30px 0 0 green;
+    }
+    &::after {
+      right: 50%;
+      box-shadow: 30px 0 0 blue;
+    }
+  }
+}

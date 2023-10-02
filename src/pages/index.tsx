@@ -4,7 +4,8 @@ import styles from "../styles/Home.module.scss";
 import React, { FC } from "react";
 import RotatingButton from "../components/buttons/RotatingButton";
 import CircularSwapButton from "../components/buttons/CircularSwapButton";
-import SwippingButton from "../components/buttons/swippingButton";
+import SwippingButton from "../components/buttons/SwippingButton";
+import CirclesButton from "../components/buttons/CirclesButton";
 
 const Home: FC = () => {
   return (
@@ -29,6 +30,7 @@ const Home: FC = () => {
           <RotatingButton />
           <CircularSwapButton />
           <SwippingButton />
+          <CirclesButton />
         </div>
       </main>
 
