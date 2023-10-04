@@ -5,7 +5,7 @@ import Link from "next/link";
 const CirclesButton = () => {
   return (
     <Link className={styles.link} href="/">
-      CireclesButton
+      <span></span>CireclesButton
     </Link>
   );
 };
