@@ -6,6 +6,7 @@ import RotatingButton from "../components/buttons/RotatingButton";
 import CircularSwapButton from "../components/buttons/CircularSwapButton";
 import SwippingButton from "../components/buttons/SwippingButton";
 import CirclesButton from "../components/buttons/CirclesButton";
+import MultiplyButton from "../components/buttons/MultiplyButton";
 
 const Home: FC = () => {
   return (
@@ -31,6 +32,7 @@ const Home: FC = () => {
           <CircularSwapButton />
           <SwippingButton />
           <CirclesButton />
+          <MultiplyButton />
         </div>
       </main>
 
